@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="loading_please_wait">Loading...please wait...</string>
+    <string name="email_et">Please enter your email address....</string>
+    <string name="pass_et">Please enter the password associated with this account!</string>
+    <string name="lock_image">lock image</string>
+    <string name="forgot_pass">Forgot password? Reset here!</string>
+    <string name="login_btn">Login</string>
+    <string name="register_btn">Register</string>
+    <string name="regis_name">Please enter your name...</string>
+    <string name="pass_regis">Confirm password</string>
+</resources>
