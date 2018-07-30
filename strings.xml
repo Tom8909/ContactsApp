@@ -16,4 +16,8 @@
     <string name="email">Enter email address for contact</string>
     <string name="submit_con">Add new contact</string>
     <string name="contacts">Contacts</string>
+    <string name="contact_name">Please enter the contact name: </string>
+    <string name="contact_email">Please enter email address: </string>
+    <string name="tel_no">Please enter contact number: </string>
+    <string name="submit_btn">Submit</string>
 </resources>

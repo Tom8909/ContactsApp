@@ -3,10 +3,13 @@ package com.example.tom.contactsapplication;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +25,8 @@ public class ContactList extends AppCompatActivity {
 
     ListView lvList;
 
+
+
     private View mProgressView;
     private View mLoginFormView;
     private TextView tvLoad;
@@ -35,6 +40,16 @@ public class ContactList extends AppCompatActivity {
         setContentView(R.layout.activity_contact_list);
 
         lvList = (ListView) findViewById(R.id.lvList);
+
+        lvList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
+            {
+                Intent intent = new Intent(ContactList.this, ContactInfo.class);
+                intent.putExtra("index", i);
+                startActivityForResult(intent, 1);
+            }
+        });
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
@@ -70,6 +85,16 @@ public class ContactList extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode ==1)
+        {
+            adapater.notifyDataSetChanged();
+        }
     }
 
     /**
