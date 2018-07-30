@@ -9,4 +9,11 @@
     <string name="register_btn">Register</string>
     <string name="regis_name">Please enter your name...</string>
     <string name="pass_regis">Confirm password</string>
+    <string name="list_con">List of Contacts</string>
+    <string name="create_con">Create Contact</string>
+    <string name="con_name">Contact Name</string>
+    <string name="phone_no">Enter contact number: </string>
+    <string name="email">Enter email address for contact</string>
+    <string name="submit_con">Add new contact</string>
+    <string name="contacts">Contacts</string>
 </resources>
